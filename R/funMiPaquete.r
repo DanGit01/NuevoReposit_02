@@ -1,5 +1,4 @@
 # Function definitions
-
 #' Calculates the Shannon Diversity Index using ln base e
 #'
 #' @param species vector of abundances of species
@@ -67,7 +66,6 @@ fixClorophylData <- function(chla)
   
   return(chla)
 }
-
 
 #' Read ecological networks in CSV format as edge list or adyacency matrix
 #'

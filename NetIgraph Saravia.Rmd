@@ -135,7 +135,9 @@ plot(g, edge.width=.3,edge.arrow.size=.4,
 
 # Read e network
 
-web <- read.csv("Data/WeddellSea_FW.csv",  header = T,check.names = F)
+web <- read.csv("Data/BarentsBoreal_FW.csv",  header = T,check.names = F)
+#web
+#dim(web)
 
 if((ncol(web)-1) == nrow(web)){
   tmp <- web[,2:ncol(web)]
@@ -145,7 +147,41 @@ if((ncol(web)-1) == nrow(web)){
   warning("el numero de filas no es igual al numero de columnas")
 }
 
+g
 
+# Calculate other network indices
+
+deg <- degree(g, mode="out") # calculate the in-degree: the number of predators  
+
+V(g)$outdegree <-  deg
+
+nTop <- length(V(g)[outdegree==0]) # Top predators do not have predators
+
+deg <- degree(g, mode="in") # calculate the in-degree: the number of preys
+
+V(g)$indegree <-  deg
+
+nBasal <- length(V(g)[indegree==0]) # Basal species do not have preys 
+
+vcount(g)-nTop-nBasal # Intermediate species
+
+size <- vcount(g)
+size
+
+links <- ecount(g)
+links
+
+linkDen <- links/size          # Linkage density
+linkDen
+
+conn <- links/size^2           # Connectance
+conn
+
+pathLength <- average.path.length(g)   # Average path length 
+pathLength
+
+clusCoef <- transitivity(g, type = "global")   # Clustering coefficient 
+clusCoef
 
 ```
 

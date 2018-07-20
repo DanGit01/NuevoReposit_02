@@ -1,0 +1,16 @@
+Package: PaqueteGato
+Title: Titulo del paquete
+Version: 0.1.0.9000
+Authors@R: person("Daniel", "Monferran", email = "danielmfr02@yahoo.com", role = c("aut", "cre"))
+Description: Lo que el paquete hace (en un párrafo)
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Depends: R(>= 3.4.4)
+Imports:
+ lubridate(>= 1.7.4),
+ ggplot2 (>= 3.0.0),
+ igraph (>= 1.1.2)
+URL: https://github.com/DanGit01/NuevoReposit_02
+BagReports: https://github.com/DanGit01/NuevoReposit_02/issues
+RoxygenNote: 6.0.1

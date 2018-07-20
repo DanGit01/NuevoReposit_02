@@ -1,4 +1,4 @@
-Package: NuevoReposit_02
+Package: PaqueteGato
 Title: Titulo del paquete
 Version: 0.1.0.9000
 Authors@R: person("Daniel", "Monferran", email = "danielmfr02@yahoo.com", role = c("aut", "cre"))
